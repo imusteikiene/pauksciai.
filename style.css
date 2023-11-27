@@ -1,0 +1,134 @@
+*{margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: pink;
+      color: #333; /* tamsus tekstas */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .tabs {
+      width: 80%;
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .tab {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 20px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      text-align: center;
+    }
+    
+    .tab:hover {
+      background-color: white;
+      transform: scale(1.05);
+    }
+    
+    .tabs img {
+      margin-top: 20px;
+      width: 100%;
+      border-radius: 10px;
+    }
+    
+    h1 {
+      text-align: center;
+      font-family: 'Times New Roman', serif;
+      margin-bottom: 20px;
+      color: black;
+    }
+    @keyframes textAnimation {
+      0% {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes textAnimation {
+      0% {
+        width: 0;
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        width: 100%;
+        opacity: 0;
+      }
+    }
+    
+    h1 {
+      text-align: center;
+      font-family: 'Times New Roman', serif;
+      margin-bottom: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    h1::before,
+    h1::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      background-color: skyblue;
+      transform-origin: right;
+      animation: textAnimation 1.5s ease-in-out infinite;
+    }
+    
+    h1::after {
+      transform-origin: left;
+      left: 0;
+    }
+    
+    h1:hover::before,
+    h1:hover::after {
+      animation: none; /* sustabdome animaciją, kai pelė užvedama */
+    }
+    
+    
+    .buttons {
+      text-align: center;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+    
+    button {
+      width: 100px;
+      height: 30px;
+      padding: 10px 15px;
+      background: skyblue;
+      border: 3px solid white;
+      text-align: center;
+      border-radius: 20px;
+      color: black;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    button:hover {
+      background: #2980b9;
+      transform: scale(1.05);
+    }
+    
